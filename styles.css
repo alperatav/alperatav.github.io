@@ -94,10 +94,11 @@ h1 em, h2 em { color: var(--orange); font-weight: inherit; }
 .project-list { display: grid; gap: 104px; }
 .project-card { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(45px, 7vw, 100px); align-items: center; }
 .project-card.reverse .project-visual { order: 2; }
-.project-visual { position: relative; min-height: 430px; overflow: hidden; border-radius: var(--radius); }
+.project-visual { position: relative; min-height: 590px; overflow: hidden; display: grid; place-items: center; border-radius: var(--radius); }
 .project-game { background: #4527a0; }
 .visual-grid { position: absolute; inset: -50%; transform: rotate(18deg); opacity: .22; background-image: linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px); background-size: 42px 42px; }
 .project-tasks { background: var(--blue); color: var(--ink); }
+.project-screenshot { position: relative; z-index: 1; width: auto; max-width: calc(100% - 64px); height: 530px; object-fit: contain; border-radius: 23px; box-shadow: 0 24px 55px rgba(0,0,0,.32); }
 .coming-soon { position: absolute; left: 35px; bottom: 32px; display: grid; }
 .coming-soon span { font-size: .65rem; font-weight: 900; letter-spacing: .16em; opacity: .65; }
 .coming-soon strong { font-family: Georgia, serif; font-size: 1.65rem; }
@@ -159,6 +160,9 @@ h1 em, h2 em { color: var(--orange); font-weight: inherit; }
 .connect h2 em { color: var(--ink); }
 .connect p:not(.eyebrow) { max-width: 650px; margin: 30px auto; color: rgba(255,255,255,.82); font-size: 1.08rem; }
 .button-light { color: var(--ink); background: white; box-shadow: 0 14px 40px rgba(73,17,0,.2); }
+.button-dark { color: white; background: var(--ink); box-shadow: 0 14px 40px rgba(73,17,0,.2); }
+.contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.contact-github { margin-top: 21px; color: rgba(255,255,255,.78); border-bottom: 1px solid rgba(255,255,255,.45); font-size: .82rem; font-weight: 750; }
 .footer { color: rgba(255,255,255,.62); background: var(--ink); }
 .footer-inner { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 25px; font-size: .76rem; }
 .footer-brand { color: white; }
@@ -208,7 +212,8 @@ h1 em, h2 em { color: var(--orange); font-weight: inherit; }
   .story-note .signature { grid-column: 1; margin-top: 14px; }
   .projects-heading { margin-bottom: 55px; }
   .project-list { gap: 75px; }
-  .project-visual { min-height: 360px; }
+  .project-visual { min-height: 540px; }
+  .project-screenshot { height: 480px; max-width: calc(100% - 52px); border-radius: 19px; }
   .task-demo { transform: translate(-50%,-60%) scale(.8); }
   .interests-grid { grid-template-columns: 1fr; }
   .interest-card, .photo-card { min-height: 430px; }
